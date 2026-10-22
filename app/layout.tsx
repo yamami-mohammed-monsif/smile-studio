@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   description: "Smile Studio — free initial Invisalign consultation.",
   openGraph: { type: "website" },
   twitter: { card: "summary_large_image" },
+  icons: { icon: [{ url: "/favicon.ico", type: "image/x-icon" }] },
 };
 
 export default function RootLayout({
