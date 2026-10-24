@@ -18,9 +18,15 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Smile Studio",
-  description: "Smile Studio — free initial Invisalign consultation.",
-  openGraph: { type: "website" },
+  title: "Smile Studio — Free Invisalign Consultation",
+  description:
+    "Explore whether Invisalign clear aligners may be right for you with a free initial consultation at Smile Studio.",
+  openGraph: {
+    title: "Smile Studio — Free Invisalign Consultation",
+    description:
+      "A straighter smile could start with a conversation. Request your free initial consultation.",
+    type: "website",
+  },
   twitter: { card: "summary_large_image" },
   icons: { icon: [{ url: "/favicon.ico", type: "image/x-icon" }] },
 };

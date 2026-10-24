@@ -11,19 +11,6 @@ import { ConsultationSection } from "@/src/sections/ConsultationSection";
 import { FinalCta } from "@/src/sections/FinalCta";
 import { Footer } from "@/src/sections/Footer";
 
-export const metadata: Metadata = {
-  title: "Smile Studio — Free Invisalign Consultation",
-  description:
-    "Explore whether Invisalign clear aligners may be right for you with a free initial consultation at Smile Studio.",
-  openGraph: {
-    title: "Smile Studio — Free Invisalign Consultation",
-    description:
-      "A straighter smile could start with a conversation. Request your free initial consultation.",
-    type: "website",
-  },
-  twitter: { card: "summary_large_image" },
-};
-
 export default function Home() {
   return (
     <div className="overflow-x-clip">
