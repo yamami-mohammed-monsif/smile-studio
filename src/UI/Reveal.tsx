@@ -2,8 +2,20 @@
 
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
-export function Reveal({ children, delay = 0, className }: { children: ReactNode; delay?: number; className?: string }) {
-  const ref = useRef<HTMLDivElement>(null);
+interface RevealProps {
+  as?: React.ElementType;
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+}
+
+export function Reveal({
+  as: Component = "div",
+  children,
+  delay = 0,
+  className,
+}: RevealProps) {
+  const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const element = ref.current;
@@ -23,13 +35,13 @@ export function Reveal({ children, delay = 0, className }: { children: ReactNode
     return () => observer.disconnect();
   }, []);
   return (
-    <div
+    <Component
       ref={ref}
       className={`scroll-reveal ${className ?? ""}`}
       data-visible={visible}
       style={{ "--reveal-delay": `${delay}s` } as CSSProperties}
     >
       {children}
-    </div>
+    </Component>
   );
 }
